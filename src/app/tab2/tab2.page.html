@@ -1,27 +1,50 @@
-
+<ion-header [translucent]="true">
   <ion-toolbar color="primary">
     <ion-title> Truco </ion-title>
   </ion-toolbar>
-
+</ion-header>
 
 <ion-content [fullscreen]="true">
+  <div class="Container ion-justify-content-center ion-aling-items-center">
+
+    <ion-button size="default">1</ion-button>
+    <ion-button size="default">3</ion-button>
+    <ion-button size="default">6</ion-button>
+    <ion-button size="default">9</ion-button>
+    <ion-button size="default">12</ion-button>
+  </div>
 
   <ion-grid>
     <ion-row>
-      <ion-button color="danger">1</ion-button>
-      <ion-button color="danger">3</ion-button>
-      <ion-button color="danger">6</ion-button>
-      <ion-button color="danger">9</ion-button>
-      <ion-button color="danger">12</ion-button>
+
+      <ion-col class="ion-justify-content-center ion-align-items-center">
+
+        <ion-button size="large" expand="full">+</ion-button>
+        <span>valor</span>
+        <ion-button size="large" expand="full">-</ion-button>
+
+        <div class="times">
+          <span>Time 02</span>
+          <span>Valor</span>
+        </div>
+      </ion-col>
+      <ion-col></ion-col>
+      <ion-col class="ion-justify-content-center ion-align-items-center">
+
+        <ion-button size="large" expand="full">+</ion-button>
+        <span>Valor</span>
+        <ion-button size="large" expand="full">-</ion-button>
+        <div class="timer">
+          <span>Time 02</span>
+          <span>Valor</span>
+        </div>
+      </ion-col>
     </ion-row>
   </ion-grid>
-
-
-
 </ion-content>
 
-
-  <ion-button color="danger"> Restaurar</ion-button>
-
-
-
+<ion-footer>
+  <ion-toolbar color="danger">
+    <ion-title class="ion-text-center">Resetar</ion-title>
+  </ion-toolbar>
+</ion-footer>
