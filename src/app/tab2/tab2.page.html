@@ -5,14 +5,16 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div class="Container ion-justify-content-center ion-aling-items-center">
+  <div class="Background"></div>
+  
+  <div class="Container">
 
     <ion-button size="default" color="dark">1</ion-button>
     <ion-button size="default" color="dark">3</ion-button>
     <ion-button size="default" color="dark">6</ion-button>
     <ion-button size="default" color="dark">9</ion-button>
     <ion-button size="default" color="dark">12</ion-button>
-  </div>
+
 
   <ion-grid>
     <ion-row>
@@ -33,7 +35,7 @@
         <ion-button size="large" expand="full" color="dark">+</ion-button>
         <span>Valor</span>
         <ion-button size="large" expand="full" color="dark">-</ion-button>
-      
+
         <div class="times">
           <span>Time 02</span>
           <span>Valor</span>
@@ -41,10 +43,14 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-</ion-content>
+</div>
 
 <ion-footer>
   <ion-toolbar color="danger" >
     <ion-title class="ion-text-center" color="dark">Resetar</ion-title>
   </ion-toolbar>
 </ion-footer>
+
+
+</ion-content>
+
