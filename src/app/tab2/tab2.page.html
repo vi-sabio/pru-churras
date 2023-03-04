@@ -8,42 +8,73 @@
   <div class="Background"></div>
   
   <div class="Container">
-
-    <ion-button size="default" color="dark">1</ion-button>
-    <ion-button size="default" color="dark">3</ion-button>
-    <ion-button size="default" color="dark">6</ion-button>
-    <ion-button size="default" color="dark">9</ion-button>
-    <ion-button size="default" color="dark">12</ion-button>
-
-
+    
+    <ion-toolbar>
+      <ion-item color="dark">
+        <ion-label>Valendo: {{valendo}}</ion-label>
+      </ion-item>
+      </ion-toolbar>
+    
+    
+    <ion-grid>
+      <ion-row>
+        <ion-col><ion-button color="dark">1</ion-button></ion-col>
+        <ion-col><ion-button color="dark" (click)="truco()">3</ion-button></ion-col>
+        <ion-col><ion-button color="dark" (click)="seis()">6</ion-button></ion-col>
+        <ion-col><ion-button color="dark" (click)="nove()">9</ion-button></ion-col>
+        <ion-col><ion-button color="dark" (click)="doze()">12</ion-button></ion-col>
+      </ion-row>
+    </ion-grid>
+    
+  
+  
+  
   <ion-grid>
     <ion-row>
-
       <ion-col class="ion-justify-content-center ion-align-items-center">
-
-        <ion-button size="large" expand="full" color="dark">+</ion-button>
-        <span>valor</span>
-        <ion-button size="large" expand="full" color="dark">-</ion-button>
-
-        <div class="times">
-          <span>Time 01</span>
-          <span>Valor</span>
-        </div>
+    
+        <ion-button size="large" color="dark">+</ion-button>
+          <ion-item>Valor:</ion-item>
+        <ion-button size="large" color="dark">-</ion-button>
       </ion-col>
+
       <ion-col class="ion-justify-content-center ion-align-items-center">
 
-        <ion-button size="large" expand="full" color="dark">+</ion-button>
-        <span>Valor</span>
-        <ion-button size="large" expand="full" color="dark">-</ion-button>
+        <ion-button size="large" color="dark">+</ion-button>
+        <ion-item>Valor:</ion-item>
+        <ion-button size="large" color="dark">-</ion-button>
 
-        <div class="times">
-          <span>Time 02</span>
-          <span>Valor</span>
-        </div>
+      
+     
+    
       </ion-col>
     </ion-row>
   </ion-grid>
 </div>
+
+
+
+
+
+
+<ion-footer>
+  <ion-toolbar>
+  <ion-item color="dark">
+    <ion-label>Time 1:</ion-label>
+  </ion-item>
+  </ion-toolbar>
+ </ion-footer>  
+
+ <ion-footer>
+  <ion-toolbar>
+  <ion-item color="dark">
+    <ion-label>Time 2:</ion-label>
+  </ion-item>
+  </ion-toolbar>
+ </ion-footer>  
+ 
+ 
+
 
 <ion-footer>
   <ion-toolbar color="danger" >
