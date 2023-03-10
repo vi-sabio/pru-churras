@@ -1,87 +1,77 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="dark">
-    <ion-title class="ion-text-center"> Truco </ion-title>
+  <ion-toolbar color="light">
+    <ion-title class="ion-text-center">Marcador de Truco</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <div class="Background"></div>
 
-  <div class="Container">
+  <div class="container-coin ">
 
     <ion-toolbar>
-      <ion-item color="dark">
+      <ion-item>
         <ion-label>Valendo: {{valendo}}</ion-label>
       </ion-item>
       </ion-toolbar>
 
 
-    <ion-grid>
-      <ion-row>
-        <ion-col><ion-button color="dark">1</ion-button></ion-col>
-        <ion-col><ion-button color="dark" (click)="truco()">3</ion-button></ion-col>
-        <ion-col><ion-button color="dark" (click)="seis()">6</ion-button></ion-col>
-        <ion-col><ion-button color="dark" (click)="nove()">9</ion-button></ion-col>
-        <ion-col><ion-button color="dark" (click)="doze()">12</ion-button></ion-col>
+    <ion-grid >
+      <ion-row class="top-menu">
+        <ion-col><ion-fab-button (click)="Valendo(1)" color="light">1</ion-fab-button></ion-col>
+        <ion-col><ion-fab-button (click)="Valendo(3)" color="light">3</ion-fab-button></ion-col>
+        <ion-col><ion-fab-button (click)="Valendo(6)" color="light">6</ion-fab-button></ion-col>
+        <ion-col><ion-fab-button (click)="Valendo(9)" color="light">9</ion-fab-button></ion-col>
+        <ion-col><ion-fab-button (click)="Valendo(12)" color="light">12</ion-fab-button></ion-col>
       </ion-row>
-    </ion-grid>
+      <ion-row >
+        <ion-col size="6" ><ion-fab-button (click)="adicionarTento(1)"><ion-icon name="add"></ion-icon></ion-fab-button></ion-col>
+        <ion-col size="6" ><ion-fab-button (click)="adicionarTento(2)"><ion-icon name="add"></ion-icon></ion-fab-button></ion-col>
+      </ion-row>
 
-
-
-
-  <ion-grid>
     <ion-row>
-      <ion-col class="ion-justify-content-center ion-align-items-center">
-
-        <ion-button size="large" color="dark">+</ion-button>
-          <ion-item>Valor:</ion-item>
-        <ion-button size="large" color="dark">-</ion-button>
+      <ion-col size="5">
+        <ion-card>
+          <ion-col><ion-label class="ion-text-center">{{tentosTime1}}</ion-label></ion-col>
+        </ion-card>
       </ion-col>
-
-      <ion-col class="ion-justify-content-center ion-align-items-center">
-
-        <ion-button size="large" color="dark">+</ion-button>
-        <ion-item>Valor:</ion-item>
-        <ion-button size="large" color="dark">-</ion-button>
-
-
-
-
+      <ion-col size="5">
+        <ion-card>
+          <ion-col><ion-label class="ion-text-center">{{tentosTime2}}</ion-label></ion-col>
+        </ion-card>
       </ion-col>
     </ion-row>
-  </ion-grid>
-</div>
 
 
 
 
+      <ion-row>
+        <ion-col size="6"><ion-fab-button (click)="removerTento(1)" color="danger"><ion-icon name="remove"></ion-icon></ion-fab-button></ion-col>
+        <ion-col size="6"><ion-fab-button (click)="removerTento(2)" color="danger"><ion-icon name="remove"></ion-icon></ion-fab-button></ion-col>
+      </ion-row>
 
 
-<ion-footer>
-  <ion-toolbar>
-  <ion-item color="dark">
-    <ion-label>Time 1:</ion-label>
-  </ion-item>
-  </ion-toolbar>
- </ion-footer>
-
- <ion-footer>
-  <ion-toolbar>
-  <ion-item color="dark">
-    <ion-label>Time 2:</ion-label>
-  </ion-item>
-  </ion-toolbar>
- </ion-footer>
-
-
-
-
-<ion-footer>
-  <ion-toolbar color="danger" >
-    <ion-title class="ion-text-center" color="dark">Resetar</ion-title>
-  </ion-toolbar>
-</ion-footer>
-
+      <ion-row >
+        <ion-col size="6">
+          <ion-card>
+            <h1 class="ion-text-center">Time 1</h1>
+            <h1 class="ion-text-center">{{pontosTime1}}</h1>
+          </ion-card>
+        </ion-col>
+        <ion-col size="6">
+          <ion-card>
+            <h1 class="ion-text-center">Time 2</h1>
+            <h1 class="ion-text-center">{{pontosTime2}}</h1>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 
 </ion-content>
 
+<ion-footer>
+  <ion-toolbar color="danger" (click)="limpar()">
+    <h1 class="ion-text-center">RESET</h1>
+  </ion-toolbar>
+</ion-footer>

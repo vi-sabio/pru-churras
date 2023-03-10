@@ -14,23 +14,24 @@ export class Tab2Page {
   pontosTime2 = 0;
 
 
-  mudarValendo(valor : number){
+  Valendo(valor : number){
     this.valendo = valor;
 
+
     if(this.valendo === 3){
-      this.presentToast('Truco Marreco');
+      this.presentToast('Truco');
     }
 
     if(this.valendo === 6){
-      this.presentToast('Meio Pau');
+      this.presentToast('Seis');
     }
 
     if(this.valendo === 9){
-      this.presentToast('NOOOVEEE !!!!');
+      this.presentToast('Nove');
     }
 
     if(this.valendo === 12){
-      this.presentToast('DOZEEEE SEU BOSTA!!!')
+      this.presentToast('Dozeee')
     }
   }
 
@@ -127,25 +128,3 @@ export class Tab2Page {
 
 }
 
-  }
-  truco(){
-    this.valendo=3;
-
-  }
-  seis(){
-    this.valendo=6;
-
-  }
-  nove(){
-    this.valendo=9;
-
-  }
-  doze(){
-    this.valendo=12;
-  }
-
-  soma(){
-
-  }
-
-}
